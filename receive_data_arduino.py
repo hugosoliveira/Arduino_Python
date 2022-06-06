@@ -93,7 +93,7 @@ if not os.path.exists(name_file):
                 data_x[ptr4] = current_milli_time() - initial_time
                 data_y[ptr4] = float(intermediate_data)
 
-                writer.writerow([str(data_x[ptr4]), str(data_y[ptr4])])
+                writer.writerow([str(data_x[ptr4]/1000), str(data_y[ptr4])])
 
                 ptr4 += 1
                 print(ptr4)
