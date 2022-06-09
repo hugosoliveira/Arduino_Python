@@ -26,15 +26,17 @@ import csv
 import os
 
 # Information about the voltage divider
-r_refer = 1_000_000
+r_refer = 2_000_000
 voltage_arduino = 5
 
 
 # Definition of the name of the file
 sponge = 'Melamine'
-solution = 'DW-20ml_Soap-2g'
-material = 'CB_0.2g'
-name_file = sponge + '__' + solution + '__' + material + '.csv'
+solution = 'DW-4.5ml_Soap-0.4g'
+material = 'CB_0.045g'
+res_refer = str(r_refer/1000000)
+capacitive_filter = '2.2MicroF'
+name_file = sponge + '__' + solution + '__' + material + '__' + res_refer + 'MOhm' + '__' + capacitive_filter + '.csv'
 
 # Definition of the time in the data acquisiton
 def current_milli_time():
